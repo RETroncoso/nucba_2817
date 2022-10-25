@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Bienvenidos al lado oscuro</title>
+	</head>
+	<body>
+		<h1>Soy un h1 y soy el título mas importante de la página</h1>
+		<h2>Esto es un h2</h2>
+		<h3>Esto es un h3</h3>
+		<h4>Esto es un h4</h4>
+		<h5>Esto es un h5</h5>
+		<h6>Esto es un h6</h6>
+		<p>Soy una etqueta p y dentro mio vas a colocar párrafos</p>
+		<p>
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Autem sint
+			beatae culpa amet assumenda quod, perferendis neque
+			<span>deleniti</span>
+			ipsum est quasi soluta, fugiat magni animi ad molestiae aliquam dicta? Ad
+			eveniet maxime obcaecati quod expedita illo, iusto nesciunt voluptate
+			perspiciatis.
+		</p>
+		<p>
+			<strong>Soy un párrafo con texto en negrita</strong>
+		</p>
+		<p>
+			Soy un párrafo que usa la etiqueta br
+			<br />
+			para hacer un salto de línea
+			<b>(a "br" la vamos a utilizar mientras sepamos solo HTML)</b>
+		</p>
+
+		<a href="https://code.visualstudio.com/" target="_blank">Soy un enlace</a>
+		<br />
+
+		<p>Clickea la imagen</p>
+		<a href="https://code.visualstudio.com/" target="_blank">
+			<img
+				src="https://www.fundacionkonex.org/custom/web/data/imagenes/repositorio/2021/03/12/16575/2021031202544061e0e3f25c3041f849de6b510817fb34.jpg"
+				alt="Imagen de Lionel Messi"
+			/>
+		</a>
+
+		<hr />
+
+		<h2>Lista desordenada</h2>
+
+		<ul>
+			<li>Hola</li>
+			<li>Hola</li>
+			<li>Hola</li>
+		</ul>
+
+		<h2>Lista ordenada</h2>
+
+		<ol class="lista-ordenada" id="lista-ol">
+			<li>Hola</li>
+			<li>Hola</li>
+			<li>Hola</li>
+		</ol>
+
+		<h2>Listas anidadas</h2>
+
+		<ol>
+			<li>
+				Soy un elemento de una lista ordenada y adentro tengo otra lista:
+				<ul>
+					<li>Hola</li>
+					<li>Hola</li>
+					<li>Hola</li>
+				</ul>
+			</li>
+			<li>
+				Soy otro elemento de la lista ordenada y adentro tengo otra lista mas
+				<ul>
+					<li>
+						Yo tambien tengo una lista adentro
+						<ol>
+							<li>Hola</li>
+							<li>Hola</li>
+						</ol>
+					</li>
+				</ul>
+			</li>
+		</ol>
+
+		<h2>Tablas</h2>
+
+		<table>
+			<tr>
+				<th>Lunes</th>
+				<th>Martes</th>
+				<th>Miercoles</th>
+				<th>Jueves</th>
+				<th>Viernes</th>
+			</tr>
+
+			<tr>
+				<td>9hs</td>
+				<td>8hs</td>
+				<td>7hs</td>
+				<td>6hs</td>
+				<td>5hs</td>
+			</tr>
+
+			<tr>
+				<td>11hs</td>
+				<td>10hs</td>
+				<td>9hs</td>
+				<td>8hs</td>
+				<td>7hs</td>
+			</tr>
+		</table>
+		<hr />
+		<h2>Formularios</h2>
+
+		<form>
+			<label for="nombre">Nombre:</label>
+			<input id="nombre" type="text" placeholder="Ingrese su nombre" />
+			<br />
+			<br />
+			<label for="apellido">Apellido:</label>
+			<input type="text" id="apellido" placeholder="Ingrese su apellido" />
+			<br />
+			<br />
+			<label for="edad">Edad:</label>
+			<input type="number" id="edad" placeholder="Ingrese su edad" />
+			<br />
+			<br />
+			<label for="correo">Email:</label>
+			<input type="email" id="correo" placeholder="Ingrese su mail" />
+			<br />
+			<br />
+			<label for="pass">Contraseña:</label>
+			<input type="password" id="pass" placeholder="Ingrese su contraseña" />
+			<br />
+			<br />
+			<label for="checkbox1">Soy un input de tipo checkbox</label>
+			<input type="checkbox" id="checkbox1" />
+			<br />
+			<br />
+			<label for="checkbox2">Soy OTRO input de tipo checkbox</label>
+			<input type="checkbox" id="checkbox2" checked />
+			<br />
+			<br />
+
+			Gusto de helado favorito:
+			<input type="radio" id="chocolate" name="gustos" />
+			<label for="chocolate">Chocolate</label>
+			<input type="radio" id="dulce-de-leche" name="gustos" />
+			<label for="dulce-de-leche">Dulce de leche</label>
+			<input type="radio" id="menta-granizada" name="gustos" />
+			<label for="menta-granizada">Menta Granizada</label>
+			<br />
+			<br />
+
+			¿Jugamos?:
+
+			<select>
+				<option value="piedra">Piedra</option>
+				<option value="papel">Papel</option>
+				<option value="tijera">Tijera</option>
+			</select>
+			<br />
+			<br />
+
+			<label for="texto">Soy un Área de texto</label>
+			<br />
+			<textarea
+				id="texto"
+				cols="30"
+				rows="10"
+				placeholder="Escribe aqui tu comentario"
+				minlength="6"
+				maxlength="20"
+			></textarea>
+			<br />
+			<br />
+
+			<input type="submit" value="Soy un botón" />
+
+			<button type="submit">Soy otro botón</button>
+		</form>
+	</body>
+</html>
