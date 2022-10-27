@@ -1,0 +1,128 @@
+/* Estilos de la clase */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* overflow */
+.overflow-box {
+    width: 100px;
+    height: 100px;
+    background-color: var(--rose);
+    border-radius: 1rem;
+}
+
+.hidden {
+    overflow: hidden;
+}
+
+.scroll {
+    overflow: scroll;
+}
+
+.auto {
+    overflow: auto;
+}
+
+/* Padding */
+.padding {
+    width: 100px;
+    border-radius: 1rem;
+    background-color: var(--rose);
+    padding: 10px 5px 20px 15px;
+    /* padding: 20px 10px; */
+    /* padding: 20px; */
+}
+
+/* Border  */
+.border {
+    border: 5px solid var(--purple);
+    padding: 5px;
+    margin-bottom: 32px;
+}
+
+.dashed {
+    border: 5px dashed var(--purple);
+    padding: 5px;
+    margin-bottom: 32px;
+}
+.dotted {
+    border: 5px dotted var(--purple);
+    padding: 5px;
+    margin-bottom: 32px;
+}
+.double {
+    border: 5px double var(--purple);
+    padding: 5px;
+}
+
+/* margin */
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: var(--rose);
+    border-radius: 1rem;
+}
+
+.box:nth-child(2) {
+    background: var(--purple);
+}
+
+.margin {
+    margin: 10px 5px 20px 15px;
+}
+
+
+.caja-ej {
+    border: 1px solid var(--rose);
+    padding: 1rem;
+}
+
+
+.caja-ej2 {
+    background-color: var(--purple);
+    width: 200px;
+    height: 200px;
+    border: 10px solid var(--rose);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 1rem;
+}
+
+
+.inline {
+    border: 1px solid var(--rose);
+    padding: 1rem;
+    border-radius: 0.4rem;
+}
+
+
+.box {
+    width: 100px;
+    height: 100px;
+    background: var(--rose);
+}
+
+/* positions */
+.relative {
+    position: relative;
+    left: 500px;
+}
+
+.absolute-container {
+    position: relative;
+    height: 100px;
+}
+
+.absolute {
+    position: absolute;
+    left: 700px;
+}
+
+.fixed {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
