@@ -40,7 +40,8 @@ header {
     align-items: center;
     height: 65px;
     padding: 0px 30px;
-    position: fixed;
+    position: sticky;
+    position: -webkit-sticky;
     top: 0;
 }
 
