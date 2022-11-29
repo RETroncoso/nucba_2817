@@ -77,12 +77,10 @@ header {
 .cart-icon {
     font-weight: 600;
     border-radius: 10px;
-    height: 35px;
-    padding: 10px 18px;
     margin-right: 1rem;
     color: var(--text-white);
     cursor: pointer;
-    border: 1px solid white;
+    font-size: 18px;
 }
 
 main {
