@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- CDN de font Awesome -->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+			integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<!-- Link a CSS -->
+		<link rel="stylesheet" href="./assets/styles.css" />
+		<title>Nucba Summit 2022</title>
+	</head>
+	<body>
+		<!-- HEADER -->
+		<header class="header">
+			<img class="logo-img" src="assets/img/logo.png" alt="Logo de Nucba" />
+			<label for="toggle-menu">
+				<i class="fas fa-bars"></i>
+			</label>
+			<input type="checkbox" id="toggle-menu" />
+			<nav class="navbar">
+				<ul class="navbar-list">
+					<li><a href="#hero">Inicio</a></li>
+					<li><a href="#about-us">Nosotros</a></li>
+					<li><a href="#lineup">Line-up</a></li>
+					<li><a href="#speakers">Speakers</a></li>
+				</ul>
+			</nav>
+		</header>
+		<main class="main">
+			<!-- HERO -->
+			<section class="section" id="hero">
+				<div class="slogan-container">
+					<div class="text-container">
+						<h1>
+							<span class="yellow-span">Javascript</span>
+							Summit 2022
+						</h1>
+						<p>Nucba Summit sobre Javascript</p>
+					</div>
+					<button class="primary-button">Ver Speakers</button>
+				</div>
+				<img class="hero-img" src="assets/img/hero-img.png" alt="Logo de JS" />
+			</section>
+			<!-- SPEAKERS -->
+
+			<section class="section" id="speakers">
+				<div class="title-container">
+					<h2 class="section-title">Speakers</h2>
+					<button>Sumarme</button>
+				</div>
+				<div class="speakers-cards-container">
+					<div class="speakers-card">
+						<div class="speakers-card-img"></div>
+						<div class="speakers-content">
+							<h3>Dwayne Johnson</h3>
+							<p class="section-p-small">Rockstar developer</p>
+						</div>
+					</div>
+					<div class="speakers-card">
+						<div class="speakers-card-img"></div>
+						<div class="speakers-content">
+							<h3>Doc. Brown</h3>
+							<p class="section-p-small">Lic. en tiempo y espacio</p>
+						</div>
+					</div>
+					<div class="speakers-card">
+						<div class="speakers-card-img"></div>
+						<div class="speakers-content">
+							<h3>Elon Musk</h3>
+							<p class="section-p-small">Twitter owner</p>
+						</div>
+					</div>
+					<div class="speakers-card">
+						<div class="speakers-card-img"></div>
+						<div class="speakers-content">
+							<h3>Sheldon Cooper</h3>
+							<p class="section-p-small">Experto en casi todo</p>
+						</div>
+					</div>
+					<div class="speakers-card">
+						<div class="speakers-card-img"></div>
+						<div class="speakers-content">
+							<h3>Sundar Pichai</h3>
+							<p class="section-p-small">CEO de Google</p>
+						</div>
+					</div>
+					<div class="speakers-card">
+						<div class="speakers-card-img">+</div>
+						<div class="speakers-content">
+							<h3>¿Queres ser speaker?</h3>
+							<p class="section-p-small">¡Sumate al panel!</p>
+						</div>
+					</div>
+				</div>
+				<button class="responsive-btn">Sumarme</button>
+			</section>
+
+			<!-- ABOUT-US -->
+
+			<section class="section" id="about-us">
+				<div class="about-img"></div>
+				<div class="about-content">
+					<h2 class="section-title">
+						#Somos
+						<span class="yellow-span">Nucba</span>
+					</h2>
+					<p>
+						Seguí el evento en vivo por las redes sociales de
+						<span class="yellow-span">Nucba</span>
+						y utilizá el hashtag para enterarte de todo lo que sucede en el
+						evento.
+					</p>
+					<div class="about-cards-container">
+						<div class="about-card">
+							<span>2</span>
+							<p class="section-p">Días</p>
+						</div>
+						<div class="about-card">
+							<span>5+</span>
+							<p class="section-p">Speakers</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- LINE-UP -->
+
+			<section class="section" id="lineup">
+				<div class="lineup-title-container">
+					<h2 class="section-title">Lineup</h2>
+					<p class="section-p">
+						Nuestro Summit online, abierto y gratuito, reune a referentes de
+						empresas lideres del mercado para compartir su conocimiento sobre
+						Javascript.
+					</p>
+				</div>
+				<p class="lineup-date">Domingo, 18 de Diciembre de 2022</p>
+				<div class="lineup-cards-container">
+					<div class="lineup-card">
+						<p class="lineup-time">09:00 - 10:00</p>
+						<div class="lineup-info">
+							<h3 class="lineup-info-title">Onboarding</h3>
+							<p class="section-p-small">Dwayne "The Rock" Johnson</p>
+						</div>
+					</div>
+					<div class="lineup-card">
+						<p class="lineup-time">10:00 - 14:00</p>
+						<div class="lineup-info">
+							<h3 class="lineup-info-title">El futuro de Js</h3>
+							<p class="section-p-small">Elon Musk y el Doc. Brown</p>
+						</div>
+					</div>
+					<div class="lineup-card">
+						<p class="lineup-time">14:00 - 17:00</p>
+						<div class="lineup-info">
+							<h3 class="lineup-info-title">Banderas y Js</h3>
+							<p class="section-p-small">Sheldon Cooper</p>
+						</div>
+					</div>
+					<div class="lineup-card">
+						<p class="lineup-time">17:00 - 24:00</p>
+						<div class="lineup-info">
+							<h3 class="lineup-info-title">Entendiendo Js</h3>
+							<p class="section-p-small">Sundar Pichai</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- FOOTER -->
+
+		<div class="footer-container">
+			<span class="divider"></span>
+			<footer class="footer">
+				<div class="footer-msg">
+					<p>
+						Felicitaciones por terminar el modulo de diseño web. Bienvenidos al
+						maravilloso mundo de
+						<span class="yellow-span">Javascript.</span>
+					</p>
+				</div>
+				<div class="footer-info">
+					<div class="footer-social">
+						<i class="fab fa-twitter"></i>
+						<i class="fab fa-facebook"></i>
+					</div>
+					<p class="footer-copyright">
+						<span class="yellow-span">NucbaJs</span>
+						Summit @ 2022
+					</p>
+					<ul class="footer-terms">
+						<li><a href="#">Privacidad</a></li>
+						<li><a href="#">Términos de uso</a></li>
+						<li><a href="#">Contactanos</a></li>
+					</ul>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
