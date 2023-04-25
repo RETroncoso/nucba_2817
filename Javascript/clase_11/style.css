@@ -1,0 +1,33 @@
+.img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .img-container img {
+    height: 300px;
+  }
+  
+  button {
+    background: #ffff00;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  
+  .btn-primary {
+    background: #ffff00;
+    color: #131415;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  

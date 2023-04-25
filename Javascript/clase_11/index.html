@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			rel="stylesheet"
+			href="https://res.cloudinary.com/dwmqwjm3y/raw/upload/v1676574202/nucba/stylescdn_u7mjb9.css"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<title>2.11 Eventos del DOM</title>
+	</head>
+	<body>
+		<header>
+			<h1>2.11 Eventos del DOM</h1>
+			<p>Conocer e implementar distintas formas para la manipulación del DOM</p>
+			<h2>Recursos de la clase:</h2>
+			<ul>
+				<li>
+					📌
+					<a href="https://developer.mozilla.org/es/docs/Web/Events">Eventos</a>
+				</li>
+			</ul>
+		</header>
+		<main>
+			<hr class="hr" />
+			<h3>Veamos la consola 👉</h3>
+			<hr class="hr" />
+
+			<h2 onclick="alert('Hola! Soy el evento')">Evento Onclick</h2>
+			<h2 id="h2Alert">Escuchador de eventos</h2>
+
+			<hr class="hr my" />
+
+			<h3>Focus/blur</h3>
+			<input type="text" placeholder="Ingresa un dato" id="inputBlur" />
+
+			<h3>Change</h3>
+
+			<input type="text" placeholder="Ingresa una comida" id="inputChange" />
+
+			<hr class="hr my" />
+
+			<form id="form">
+				<input type="text" placeholder="Usuario" id="user" />
+				<input type="password" placeholder="Contraseña" id="pass" />
+				<button class="btn-primary" id="boton">Enviar</button>
+			</form>
+
+			<hr class="hr my" />
+
+			<div class="img-container">
+				<img src="./img/messi0.jpg" alt="Messi" id="img" />
+				<button id="imgChange">Cambiar imagen</button>
+			</div>
+		</main>
+
+		<!-- scripts -->
+		<script src="./main.js"></script>
+	</body>
+</html>
