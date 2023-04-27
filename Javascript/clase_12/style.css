@@ -1,0 +1,39 @@
+.card {
+  background-color: #fff;
+  color: #252525;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-radius: 1.2rem;
+  max-width: 350px;
+  overflow: hidden;
+  padding: 0.5rem;
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.card-button {
+  background-color: #252525;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Fn Generadora */
+.fn-generadora {
+  display: flex;
+  gap: 20px;
+}
