@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <link rel="stylesheet" href="../assets/style.css" />
+    <link rel="stylesheet" href="../assets/form.css" />
+</head>
+
+<body>
+    <header>
+        <nav class="navbar__container">
+            <a href="../index.html" class="logo__container">
+                <img src="../assets/img/logo.png" alt="logo" class="navbar__logo" /> Nucba Students
+            </a>
+        </nav>
+    </header>
+    <main>
+        <form class="form__container" id="login--form" novalidate>
+            <p class="form__title">Iniciá Sesión</p>
+
+            <!-- Email -->
+            <div class="form__field">
+                <input type="email" placeholder="Email" class="form__input" id="email" autocomplete="off" />
+            </div>
+            <!-- Email -->
+
+            <!-- Contraseña -->
+            <div class="form__field">
+                <input type="password" placeholder="Password" class="form__input" id="password" autocomplete="off" />
+            </div>
+            <!-- Contraseña -->
+
+            <small id="form__error"></small>
+            <input type="submit" class="form__submit__btn" value="Iniciar Sesión" />
+            <p class="form--redirect">¿No tenés cuenta? <a class="link--gradient" href="./register.html">Registrate</a>
+            </p>
+        </form>
+    </main>
+    <footer>
+        <p class="footer__text">
+            Hecho con ❤️ en <span class="text--gradient">NUCBA</span>
+        </p>
+    </footer>
+    <script src="../assets/login.js"></script>
+</body>
+
+</html>

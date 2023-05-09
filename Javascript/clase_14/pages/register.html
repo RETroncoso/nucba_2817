@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Register</title>
+		<link rel="stylesheet" href="../assets/style.css" />
+		<link rel="stylesheet" href="../assets/form.css" />
+	</head>
+
+	<body>
+		<header>
+			<nav class="navbar__container">
+				<a href="../index.html" class="logo__container">
+					<img src="../assets/img/logo.png" alt="logo" class="navbar__logo" />
+					Nucba Students
+				</a>
+			</nav>
+		</header>
+		<main>
+			<form class="form__container" id="register-form" novalidate>
+				<p class="form__title">Crea tu cuenta</p>
+				<!-- Nombre -->
+				<div class="form__field">
+					<input
+						type="text"
+						placeholder="Nombre"
+						class="form__input"
+						id="name"
+						autocomplete="off"
+					/>
+					<small></small>
+				</div>
+				<!-- Nombre -->
+
+				<!-- Apellido -->
+				<div class="form__field">
+					<input
+						type="text"
+						placeholder="Apellido"
+						class="form__input"
+						id="lastName"
+						autocomplete="off"
+					/>
+					<small></small>
+				</div>
+				<!-- Apellido -->
+
+				<!-- Email -->
+				<div class="form__field">
+					<input
+						type="email"
+						placeholder="Email"
+						class="form__input"
+						id="email"
+						autocomplete="off"
+						required
+					/>
+					<small></small>
+				</div>
+				<!-- Email -->
+
+				<!-- Password -->
+				<div class="form__field">
+					<input
+						type="password"
+						placeholder="Password"
+						class="form__input"
+						id="password"
+						autocomplete="off"
+					/>
+					<small></small>
+				</div>
+				<!-- Password -->
+
+				<!-- Telefono -->
+				<div class="form__field">
+					<input
+						type="text"
+						placeholder="Telefono"
+						class="form__input"
+						id="phone"
+						autocomplete="off"
+					/>
+					<small></small>
+				</div>
+				<!-- Telefono -->
+
+				<input type="submit" class="form__submit__btn" value="Registrarse" />
+				<p class="form--redirect">
+					¿Ya tenés cuenta?
+					<a class="link--gradient" href="./login.html">Iniciá Sesión</a>
+				</p>
+			</form>
+		</main>
+		<footer>
+			<p class="footer__text">
+				Hecho con ❤️ en
+				<span class="text--gradient">NUCBA</span>
+			</p>
+		</footer>
+		<script src="../assets/register.js"></script>
+	</body>
+</html>

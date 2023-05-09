@@ -1,0 +1,175 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #0d0d0d;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #171719;
+  z-index: 1;
+  height: 80px;
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: #171719;
+  z-index: 1;
+  height: 80px;
+  width: 100%;
+}
+
+.logo__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+  color: white;
+}
+
+.navbar__logo {
+  height: 80%;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
+  gap: 50px;
+}
+
+.content__text h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.content__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content__img {
+  max-width: 500px;
+}
+
+.content__text__btns {
+  display: flex;
+  gap: 30px;
+  padding-top: 30px;
+}
+
+.btn {
+  padding: 10px 25px;
+  border-radius: 1rem;
+  background-color: #252525;
+  font-size: 14px;
+}
+
+.btn--login {
+  background-color: #242424;
+}
+
+.btn__span {
+  background: #12c2e9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(135deg, #cb5eee 0%, #4be1ec 100%);
+  background: linear-gradient(135deg, #cb5eee 0%, #4be1ec 100%);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.btn--login:hover {
+  background-color: #171719;
+}
+
+.btn--register {
+  background: #12c2e9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(135deg, #cb5eee 0%, #4be1ec 100%);
+  background: linear-gradient(135deg, #cb5eee 0%, #4be1ec 100%);
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.btn--register:hover {
+  background: -webkit-linear-gradient(135deg, #c149e9 0%, #2bc7d2 100%);
+  background: linear-gradient(135deg, #c149e9 0%, #2bc7d2 100%);
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0px;
+}
+
+.form--redirect {
+  margin-top: 10px;
+}
+
+.text--gradient,
+.link--gradient {
+  background: #12c2e9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(135deg, #cb5eee 0%, #4be1ec 100%);
+  background: linear-gradient(135deg, #cb5eee 0%, #4be1ec 100%);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  font-weight: 600;
+}
+
+.text--gradient {
+  text-transform: uppercase;
+}
+
+#logout-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+#logout-message i {
+  background: #12c2e9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(135deg, #cb5eee 0%, #4be1ec 100%);
+  background: linear-gradient(135deg, #cb5eee 0%, #4be1ec 100%);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+}
+
+#logout-message i :hover {
+  background: -webkit-linear-gradient(135deg, #c149e9 0%, #2bc7d2 100%);
+  background: linear-gradient(135deg, #c149e9 0%, #2bc7d2 100%);
+}
