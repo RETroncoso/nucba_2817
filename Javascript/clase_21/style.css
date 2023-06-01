@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #131415;
+  color: white;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  gap: 20px;
+}
+
+.my {
+  margin: 2rem 0;
+}
+
+main {
+  padding: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+p {
+  max-width: 950px;
+}
+
+ul {
+  padding: 1rem 0;
+  overflow: auto;
+  list-style-type: none;
+}
+
+a:visited,
+a {
+  color: white;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.hr {
+  border: 2px solid #ffff00;
+  max-width: 800px;
+  width: 100%;
+}
+
+@media (max-width: 420px) {
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+/*  */
+.card {
+  background-color: #fff;
+  color: #252525;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  border-radius: 1.2rem;
+  max-width: 350px;
+  overflow: hidden;
+  padding: 0.5rem;
+}
+
+.card-img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.card-button {
+  background-color: #252525;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Fn Generadora */
+.fn-generadora {
+  display: flex;
+  gap: 20px;
+}
