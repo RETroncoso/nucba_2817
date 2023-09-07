@@ -5,20 +5,41 @@ import LoginInput from "../../components/UI/LoginInput/LoginInput";
 import Submit from "../../components/UI/Submit/Submit";
 
 import { Form, LoginContainerStyled, LoginEmailStyled } from "./LoginStyles";
+import { loginInitialValues } from "../../formik/initialValues";
+import { loginValidationSchema } from "../../formik/validationSchema";
+import { loginUser } from "../../axios/axios-user";
+import { useDispatch } from "react-redux";
+import { setCurrentUser } from "../../redux/user/userSlice";
+import useRedirect from "../../hooks/useRedirect";
 
 const Login = () => {
+  const dispatch = useDispatch();
+  useRedirect("/")
+
   return (
     <LoginContainerStyled>
       <h1>Iniciar Sesión</h1>
-      <Formik>
+      <Formik
+        initialValues={loginInitialValues}
+        validationSchema={loginValidationSchema}
+        onSubmit={async (values) => {
+          const user = await loginUser(values.email, values.password);
+          if(user) {
+            dispatch(setCurrentUser({
+              ...user.usuario,
+              token: user.token
+            }))
+          }          
+        }}
+      >
         <Form>
-          <LoginInput type="text" placeholder="Email" />
-          <LoginInput type="password" placeholder="Password" />
+          <LoginInput name='email' type="text" placeholder="Email" />
+          <LoginInput name='password' type="password" placeholder="Password" />
           <Link to="/forgot-password"></Link>
           <Link to="/register">
             <LoginEmailStyled>¿No tenes cuenta? Crea una</LoginEmailStyled>
           </Link>
-          <Submit type="button" onClick={(e) => e.preventDefault()}>
+          <Submit>
             Ingresar
           </Submit>
         </Form>

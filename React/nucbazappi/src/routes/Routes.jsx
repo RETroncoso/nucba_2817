@@ -8,6 +8,7 @@ import MisOrdenes from "../pages/MisOrdenes/MisOrdenes";
 import PageNotFound from "../pages/PageNotFound/PageNotFound";
 import Register from "../pages/Register/Register";
 import Resumen from "../pages/Resumen/Resumen";
+import ProtectedRoute from "../components/ProtectedRoute/ProtectedRoute";
 
 function Routes() {
   return (
@@ -19,7 +20,16 @@ function Routes() {
       <Route path="/felicitaciones" element={<Felicitaciones />} />
       <Route path="/resumen/:orderId" element={<Resumen />} />
 
-      <Route path="/checkout" element={<Checkout />} />
+      {/* <Route path="/checkout" element={<Checkout />} /> */}
+
+      <Route
+        path="/checkout"
+        element={
+          <ProtectedRoute redirectTo='/login' >
+            <Checkout />
+          </ProtectedRoute>
+        }
+      />
 
       <Route path="*" element={<PageNotFound />} />
     </ReactDomRoutes>
