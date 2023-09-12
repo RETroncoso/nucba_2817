@@ -8,13 +8,15 @@ import productsReducer from "./products/productsSlice"
 import recommendedReducer from "./recommended/recommendedSlice"
 import cartReducer from "./cart/cartSlice"
 import userReducer from "./user/userSlice"
+import ordersReducer from "./orders/ordersSlice"
 
 const reducers = combineReducers({
     categories: categoriesReducer,
     products: productsReducer,
     recommended: recommendedReducer,
     cart: cartReducer,
-    user: userReducer
+    user: userReducer,
+    orders: ordersReducer
 });
 
 const persistConfig = {

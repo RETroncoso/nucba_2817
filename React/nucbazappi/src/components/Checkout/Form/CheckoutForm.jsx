@@ -4,17 +4,45 @@ import Submit from "../../UI/Submit/Submit";
 import { CheckoutDatosStyled, Form, Formik } from "./CheckoutFormStyles";
 import {checkoutInitialValues} from "../../../formik/initialValues"
 import {checkoutValidationSchema} from "../../../formik/validationSchema"
+import { createOrder } from "../../../axios/axios-orders";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { clearCart } from "../../../redux/cart/cartSlice";
+import Loader from "../../UI/Loader/Loader";
 
-const CheckoutForm = ({cartItems}) => {
+const CheckoutForm = ({cartItems, shippingCost, price}) => {
+
+  const dispatch = useDispatch()
+  const {currentUser} = useSelector(state => state.user)
+  const navigate = useNavigate()
+
   return (
     <CheckoutDatosStyled>
       <h2>Ingresá tus datos</h2>
       <Formik
         initialValues={checkoutInitialValues}
         validationSchema={checkoutValidationSchema}
-        onSubmit={(values) => console.log(values)}
+        onSubmit={ async (values) => {
+          const orderData = {
+            items: cartItems,
+            price,
+            shippingCost,
+            total: price + shippingCost,
+            shippingDetails: {...values}
+          };
+          try {
+            await createOrder(orderData, dispatch, currentUser);
+            navigate("/felicitaciones")
+            dispatch(clearCart())
+          } catch (error) {
+            alert("Error al crear la orden")
+          }
+        }
+      }
       >
-        <Form>
+        {
+          ({isSubmitting}) => (
+            <Form>
           <Input
             name= "name"
             htmlFor="nombre"
@@ -52,9 +80,16 @@ const CheckoutForm = ({cartItems}) => {
             Dirección
           </Input>
           <div>
-            <Submit disabled={!cartItems.length}>Iniciar Pedido</Submit>
+            <Submit disabled={!cartItems.length || isSubmitting}>
+              {
+                isSubmitting ? <Loader/> : "Iniciar Pedido"
+              }
+              </Submit>
           </div>
         </Form>
+          )
+        }
+        
       </Formik>
     </CheckoutDatosStyled>
   );

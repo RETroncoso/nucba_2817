@@ -13,32 +13,56 @@ import {
   ResumenContainerStyled,
   ResumenTitleStyled,
 } from "./ResumenStyles";
+import { useEffect, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { getOrders } from "../../axios/axios-orders";
+import { useParams } from "react-router-dom";
 
 const Resumen = () => {
+
+  const [visitedOrder, setVisitedOrder] = useState(null);
+  const {currentUser} = useSelector(state => state.user)
+  const {orders} = useSelector(state => state.orders)
+  const dispatch = useDispatch()
+  const {orderId} = useParams()
+
+  useEffect(() => {
+    if (!orders) {
+      getOrders(dispatch, currentUser)
+    }
+    setVisitedOrder(orders?.find((order) => order._id === orderId))
+  }, [currentUser, dispatch, orderId, orders])
+
+  console.log(visitedOrder);
+
   return (
     <ResumenContainerStyled>
       <ResumenTitleStyled>
-        <h1>Resumen Orden: 0912</h1>
+        <h1>Resumen Orden: #{visitedOrder?._id.slice(0,7)}</h1>
         <Link borderRadius="20" to="/mis-ordenes"></Link>
       </ResumenTitleStyled>
       <h2>Productos:</h2>
       <ProductsContainerStyled>
-        <CardResumen />
+        {
+          visitedOrder?.items.map((item) => {
+            return <CardResumen key={item._id} {...item} />
+          })
+        }
       </ProductsContainerStyled>
       <HrStyled />
       <ResumenContainerInfoStyled>
         <h3>Costos:</h3>
         <CostoProductoStyled>
           <p>Costo de productos</p>
-          <span>{formatPrice(2500)}</span>
+          <span>{formatPrice(visitedOrder?.price)}</span>
         </CostoProductoStyled>
         <CostoEnvioStyled>
           <p>Costo de envío</p>
-          <span>{formatPrice(500)}</span>
+          <span>{formatPrice(visitedOrder?.shippingCost)}</span>
         </CostoEnvioStyled>
         <CostoTotalStyled>
           <p>Total</p>
-          <span>{formatPrice(3000)}</span>
+          <span>{formatPrice(visitedOrder?.total)}</span>
         </CostoTotalStyled>
       </ResumenContainerInfoStyled>
     </ResumenContainerStyled>
